@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef7fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position:relative
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #03609c;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out;
+}
+
+h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.team-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.team-info label {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.team-info input,
+.team-info select {
+    margin-right: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.monitoring {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    animation: fadeIn 1s ease-in;
+}
+.battery {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.battery-level {
+    width: 100%;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.video,.mission-imaging, .attitude-info {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.video:hover, .battery:hover, .mission-imaging:hover, .attitude-info:hover {
+    transform: scale(1.05);
+}
+
+.video-stream, .surface-imaging, .underwater-imaging, .trajectory, .sog, .cog {
+    margin-top: 10px;
+    height: 200px;
+    background-color: #035f9c80;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    background-image: url('ship-pattern.png');
+    background-size: cover;
+    background-blend-mode:color-burn;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #03609c;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.geo-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.geo-tag p {
+    margin: 5px 0;
+}
+
+h2 {
+    color: #03609c;
+    font-size: 20px;
+}
+
+h3 {
+    color: #03609c;
+    font-size: 16px;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
