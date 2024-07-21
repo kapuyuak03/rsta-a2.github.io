@@ -1,1 +1,1 @@
-# RSTA-A2.github.io
+# rsta-a2.github.io
