@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.1.1/dist/chart.umd.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tampilan Sistem Monitoring</h1>
+            <div class="team-info">
+                <label>Nama Tim: RSTA-A2</label>
+                <label>PT: UNIVERSITAS ANDALAS </label>
+                
+            </div>
+        </header>
+
+        <section class="monitoring">
+            <div class="video">
+                <h2>Visual Video</h2>
+                <video id="video-stream" autoplay playsinline></video>
+                <div class="video-stream" id="video-stream">
+                    <!-- Video stream will be displayed here -->
+                </div>
+            </div>
+            <div class="mission-imaging">
+                <h2>Mission Imaging</h2>
+                <div class="surface-imaging" id="surface-imaging">
+                    <h3>Surface Imaging</h3>
+                    <div class="info-box">
+                        <p class="time">Time: <span id="time">hh:mm:ss</span></p>
+                        <p class="date">Date: <span id="date">DD/MM/YYYY</span></p>
+                        <p class="coordinate">Coordinate: <span id="surface-coordinate">[S 3.56734 E 104.12345]</span></p>
+                    </div>
+                    <!-- Surface imaging display -->
+                </div>
+                <div class="underwater-imaging" id="underwater-imaging">
+                    <h3>Underwater Imaging</h3>
+                    <div class="info-box">
+                        <p class="time">Time: <span id="underwater-time">hh:mm:ss</span></p>
+                        <p class="date">Date: <span id="underwater-date">DD/MM/YYYY</span></p>
+                        <p class="coordinate">Coordinate: <span id="underwater-coordinate">[S 3.56734 E 104.12345]</span></p>
+                    </div>
+                    <!-- Underwater imaging display -->
+                </div>
+            </div>
+            <div class="attitude-info">
+                <h2>Attitude Information</h2>
+                <div  id="trajectory">
+                    <h3>Trajectory Graph</h3>
+                    <canvas id="trajectoryChart"></canvas>
+                    <!-- Trajectory graph -->
+                </div>
+                 <!-- SOG Display -->
+        <div class="data-box">
+            <h2>Speed Over Ground (SOG)</h2>
+            <div class="sog-bar">
+                <div id="sog-fill" class="sog-fill"></div>
+            </div>
+            <p id="sog-value">0 knots</p>
+        </div>
+                     <!-- COG Display -->
+        <div class="data-box">
+            <h2>Course Over Ground (COG)</h2>
+            <div class="cog-circle">
+                <div id="cog-line" class="cog-line"></div>
+            </div>
+            <p id="cog-value">0°</p>
+        </div></div>
+        <div class="attitude-info">
+            <h2>Latitude </h2>
+             <!-- SOG Display -->
+    <div class="data-box">
+        <h2>Speed Over Ground (SOG)</h2>
+        <div class="sog-bar">
+            <div id="sog-fill" class="sog-fill"></div>
+        </div>
+        <p id="sog-value">0 knots</p>
+    </div>
+    </div>
+        </section>
+
+        <div class="battery" id="battery-container">
+            <h2>Battery Level</h2>
+            <div class="battery-level" id="battery-level">
+                <!-- Battery level indicator -->
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
